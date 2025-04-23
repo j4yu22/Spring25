@@ -30,12 +30,13 @@ public static class Stats {
         for (int i = 1; i < numbers.Count; i++) {
             if (numbers[i].CompareTo(maxValue) > 0) {
                 maxValue = numbers[i];
+                }
     }
     public static int Add(List<int> values int indexStart=0) {
         if (values == null) throw new ArgumentNullException(nameof(values), "Input list cannot be null.");
         return values[indexStart..].Sum();
     }
-}}}
+}
 
 public static class Program 
 {

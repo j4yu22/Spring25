@@ -1,0 +1,166 @@
+{
+  "format": 1,
+  "restore": {
+    "O:\\Coding\\python\\gitstuff\\Spring25\\AandC\\Assignments\\AlgorithmLibTest\\AlgorithmLibTest.csproj": {}
+  },
+  "projects": {
+    "O:\\Coding\\python\\gitstuff\\Spring25\\AandC\\Assignments\\AlgorithmLibTest\\AlgorithmLibTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "O:\\Coding\\python\\gitstuff\\Spring25\\AandC\\Assignments\\AlgorithmLibTest\\AlgorithmLibTest.csproj",
+        "projectName": "AlgorithmLibTest",
+        "projectPath": "O:\\Coding\\python\\gitstuff\\Spring25\\AandC\\Assignments\\AlgorithmLibTest\\AlgorithmLibTest.csproj",
+        "packagesPath": "C:\\Users\\12107\\.nuget\\packages\\",
+        "outputPath": "O:\\Coding\\python\\gitstuff\\Spring25\\AandC\\Assignments\\AlgorithmLibTest\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "O:\\Coding\\Visual Studio Bulding Tools\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\12107\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "O:\\Coding\\python\\gitstuff\\Spring25\\AandC\\Assignments\\AlgorithmLib\\AlgorithmLib.csproj": {
+                "projectPath": "O:\\Coding\\python\\gitstuff\\Spring25\\AandC\\Assignments\\AlgorithmLib\\AlgorithmLib.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.8.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.14.0, )"
+            },
+            "NUnit.Analyzers": {
+              "target": "Package",
+              "version": "[3.9.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "O:\\Coding\\python\\gitstuff\\Spring25\\AandC\\Assignments\\AlgorithmLib\\AlgorithmLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "O:\\Coding\\python\\gitstuff\\Spring25\\AandC\\Assignments\\AlgorithmLib\\AlgorithmLib.csproj",
+        "projectName": "AlgorithmLib",
+        "projectPath": "O:\\Coding\\python\\gitstuff\\Spring25\\AandC\\Assignments\\AlgorithmLib\\AlgorithmLib.csproj",
+        "packagesPath": "C:\\Users\\12107\\.nuget\\packages\\",
+        "outputPath": "O:\\Coding\\python\\gitstuff\\Spring25\\AandC\\Assignments\\AlgorithmLib\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "O:\\Coding\\Visual Studio Bulding Tools\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\12107\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
