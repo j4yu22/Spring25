@@ -1,0 +1,12 @@
+D:\python\gitstuff\spring25\aandc\assignments\algorithmlib\bin\Debug\net9.0\AlgorithmLib.deps.json
+D:\python\gitstuff\spring25\aandc\assignments\algorithmlib\bin\Debug\net9.0\AlgorithmLib.dll
+D:\python\gitstuff\spring25\aandc\assignments\algorithmlib\bin\Debug\net9.0\AlgorithmLib.pdb
+D:\python\gitstuff\spring25\aandc\assignments\algorithmlib\obj\Debug\net9.0\AlgorithmLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\python\gitstuff\spring25\aandc\assignments\algorithmlib\obj\Debug\net9.0\AlgorithmLib.AssemblyInfoInputs.cache
+D:\python\gitstuff\spring25\aandc\assignments\algorithmlib\obj\Debug\net9.0\AlgorithmLib.AssemblyInfo.cs
+D:\python\gitstuff\spring25\aandc\assignments\algorithmlib\obj\Debug\net9.0\AlgorithmLib.csproj.CoreCompileInputs.cache
+D:\python\gitstuff\spring25\aandc\assignments\algorithmlib\obj\Debug\net9.0\AlgorithmLib.sourcelink.json
+D:\python\gitstuff\spring25\aandc\assignments\algorithmlib\obj\Debug\net9.0\AlgorithmLib.dll
+D:\python\gitstuff\spring25\aandc\assignments\algorithmlib\obj\Debug\net9.0\refint\AlgorithmLib.dll
+D:\python\gitstuff\spring25\aandc\assignments\algorithmlib\obj\Debug\net9.0\AlgorithmLib.pdb
+D:\python\gitstuff\spring25\aandc\assignments\algorithmlib\obj\Debug\net9.0\ref\AlgorithmLib.dll
