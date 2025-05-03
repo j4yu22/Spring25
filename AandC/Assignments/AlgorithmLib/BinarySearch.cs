@@ -40,7 +40,31 @@ public static class BinarySearch
     */
     public static int _Search<T>(List<T> data, T target, int first, int last) where T : IComparable<T>
     {
-        return 0;
+        // Base case: the search range is invalid
+        if (first > last)
+            return -1;
+
+        // Calculate the midpoint of the current search range
+        int mid = (first + last) / 2;
+
+        // Compare the target with the middle element
+        int comparison = target.CompareTo(data[mid]);
+
+        if (comparison == 0)
+        {
+            // Match found at mid
+            return mid;
+        }
+        else if (comparison < 0)
+        {
+            // Target is smaller, search left half
+            return _Search(data, target, first, mid - 1);
+        }
+        else
+        {
+            // Target is larger, search right half
+            return _Search(data, target, mid + 1, last);
+        }
     }
 
 }
