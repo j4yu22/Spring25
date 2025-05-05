@@ -5,7 +5,15 @@ public static class SelectionSort
 {
     public static void Sort<T>(List<T> data) where T : IComparable
     {
-       
+        for (var i = 0, i < data.count - 1; i++) {
+            var smallest = i;
+            for (var j  = i + 1; j < data.count; j++) {
+                if (data[j].CompareTo(data[smallest]) < 0) {
+                    smallest = j;
+                }
+            }
+            (data[i], data[smallest]) = (data[smallest], data[i]);
+        }
     }
 }
 
@@ -13,7 +21,15 @@ public static class InsertionSort
 {
     public static void Sort<T>(List<T> data) where T : IComparable
     {
-       
+        for (var i = 1; i < data.count; i++) {
+            var item = data[i];
+            var insert = i - 1;
+            while (insert > -1 && item.CompareTo(data(insert)) < 0) {
+                data[insert + 1] = data[insert];
+                insert--;
+            }
+            data[insert + 1] = item;
+        }
     }
 }
 

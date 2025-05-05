@@ -1,0 +1,5 @@
+O:\coding\python\gitstuff\spring25\aandc\classroom\week3a\obj\Debug\net9.0\main.GeneratedMSBuildEditorConfig.editorconfig
+O:\coding\python\gitstuff\spring25\aandc\classroom\week3a\obj\Debug\net9.0\main.AssemblyInfoInputs.cache
+O:\coding\python\gitstuff\spring25\aandc\classroom\week3a\obj\Debug\net9.0\main.AssemblyInfo.cs
+O:\coding\python\gitstuff\spring25\aandc\classroom\week3a\obj\Debug\net9.0\main.csproj.CoreCompileInputs.cache
+O:\coding\python\gitstuff\spring25\aandc\classroom\week3a\obj\Debug\net9.0\main.sourcelink.json
