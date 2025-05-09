@@ -1,0 +1,15 @@
+O:\Coding\python\gitstuff\Spring25\AandC\Workshops\week3_workshop\sorting\bin\Debug\net9.0\sorting.exe
+O:\Coding\python\gitstuff\Spring25\AandC\Workshops\week3_workshop\sorting\bin\Debug\net9.0\sorting.deps.json
+O:\Coding\python\gitstuff\Spring25\AandC\Workshops\week3_workshop\sorting\bin\Debug\net9.0\sorting.runtimeconfig.json
+O:\Coding\python\gitstuff\Spring25\AandC\Workshops\week3_workshop\sorting\bin\Debug\net9.0\sorting.dll
+O:\Coding\python\gitstuff\Spring25\AandC\Workshops\week3_workshop\sorting\bin\Debug\net9.0\sorting.pdb
+O:\Coding\python\gitstuff\Spring25\AandC\Workshops\week3_workshop\sorting\obj\Debug\net9.0\sorting.GeneratedMSBuildEditorConfig.editorconfig
+O:\Coding\python\gitstuff\Spring25\AandC\Workshops\week3_workshop\sorting\obj\Debug\net9.0\sorting.AssemblyInfoInputs.cache
+O:\Coding\python\gitstuff\Spring25\AandC\Workshops\week3_workshop\sorting\obj\Debug\net9.0\sorting.AssemblyInfo.cs
+O:\Coding\python\gitstuff\Spring25\AandC\Workshops\week3_workshop\sorting\obj\Debug\net9.0\sorting.csproj.CoreCompileInputs.cache
+O:\Coding\python\gitstuff\Spring25\AandC\Workshops\week3_workshop\sorting\obj\Debug\net9.0\sorting.sourcelink.json
+O:\Coding\python\gitstuff\Spring25\AandC\Workshops\week3_workshop\sorting\obj\Debug\net9.0\sorting.dll
+O:\Coding\python\gitstuff\Spring25\AandC\Workshops\week3_workshop\sorting\obj\Debug\net9.0\refint\sorting.dll
+O:\Coding\python\gitstuff\Spring25\AandC\Workshops\week3_workshop\sorting\obj\Debug\net9.0\sorting.pdb
+O:\Coding\python\gitstuff\Spring25\AandC\Workshops\week3_workshop\sorting\obj\Debug\net9.0\sorting.genruntimeconfig.cache
+O:\Coding\python\gitstuff\Spring25\AandC\Workshops\week3_workshop\sorting\obj\Debug\net9.0\ref\sorting.dll

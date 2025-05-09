@@ -1,5 +1,6 @@
 ﻿// CSE 381 Workshop 3
 
+using System.Security.Cryptography.X509Certificates;
 using System.Text.Json;
 
 // Structure to represent the JSON data we will read
@@ -59,10 +60,10 @@ class Program
         }
 		
 		// Do your sorting here
-        
+        var books_sorted = books.OrderBy(x => x.title.Length);
 		
 		// Display the books
-        foreach (var book in books)
+        foreach (var book in books_sorted)
         {
             Console.WriteLine(book);
         }
