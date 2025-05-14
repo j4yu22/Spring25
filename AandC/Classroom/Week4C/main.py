@@ -26,7 +26,9 @@ def SortPosition(data, rangeData, position):
     return sorted
 
 def Sort(data, rangeData, item_len):
-    return []
+    for position in range(item_len - 1, -1, -1):
+        data = SortPosition(data, rangeData, position)
+    return data
         
 data = ["tim", "cow", "sue", "bob", "col", "cia", "dog"]
 sorted = Sort(data, 256, 3)
