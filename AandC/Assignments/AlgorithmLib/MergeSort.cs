@@ -35,8 +35,15 @@ public static class MergeSort
      */
     public static void _Sort<T>(List<T> data, int first, int last) where T : IComparable<T>
     {
+        if (first < last) // base case
+        {
+            int mid = (first + last) / 2;
+            _Sort(data, first, mid); // sort the left half
+            _Sort(data, mid + 1, last); // sort the right half
+            Merge(data, first, mid, last); // merge the two halves
+        }
     }
-    
+
     /* Merge two sorted list which are adjacent to each other back into
      * the same list.
      *
@@ -50,6 +57,23 @@ public static class MergeSort
      */
     public static void Merge<T>(List<T> data, int first, int mid, int last) where T : IComparable<T>
     {
+        var left = new List<T>();
+        var right = new List<T>();
+
+        for (int i = first; i <= mid; i++) left.Add(data[i]);
+        for (int i = mid + 1; i <= last; i++) right.Add(data[i]);
+
+        int iLeft = 0, iRight = 0, iMerged = first;
+
+        while (iLeft < left.Count && iRight < right.Count) // merge the two lists
+        {
+            if (left[iLeft].CompareTo(right[iRight]) <= 0) 
+                data[iMerged++] = left[iLeft++]; // take remaining from left
+            else
+                data[iMerged++] = right[iRight++]; // take remaining from right
+        }
+
+        while (iLeft < left.Count) data[iMerged++] = left[iLeft++]; // copy remaining from left
+        while (iRight < right.Count) data[iMerged++] = right[iRight++]; // copy remaining from right
     }
 }
-
