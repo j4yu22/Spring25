@@ -25,6 +25,53 @@ public static class BellmanFordShortestPath
     */
     public static (List<int>, List<int>) ShortestPath(Graph g, int startVertex)
     {
-        return (new List<int>(), new List<int>());
-    } 
+        // get number of vertices
+        int n = g.Size();
+        // set all distances to infinity
+        List<int> distance = Enumerable.Repeat(Graph.INF, n).ToList();
+        // set all predecessors to infinity
+        List<int> pred = Enumerable.Repeat(Graph.INF, n).ToList();
+        // distance to start vertex is 0
+        distance[startVertex] = 0;  
+
+        // relax all edges v-1 times
+        for (int i = 0; i < n - 1; i++)
+        {
+            for (int u = 0; u < n; u++)
+            {
+                // go through all edges from u
+                foreach (var edge in g.Edges(u))
+                {
+                    int v = edge.DestId;
+                    int weight = edge.Weight;
+
+                    // update if shorter path found
+                    if (distance[u] != Graph.INF && distance[u] + weight < distance[v])
+                    {
+                        distance[v] = distance[u] + weight;
+                        pred[v] = u;
+                    }
+                }
+            }
+        }
+
+        // check for negative weight cycles
+        for (int u = 0; u < n; u++)
+        {
+            foreach (var edge in g.Edges(u))
+            {
+                int v = edge.DestId;
+                int weight = edge.Weight;
+
+                // if shorter path found, cycle exists
+                if (distance[u] != Graph.INF && distance[u] + weight < distance[v])
+                {
+                    // return empty if cycle
+                    return (new List<int>(), new List<int>());  
+                }
+            }
+        }
+
+        return (distance, pred);  // return final distances and predecessors
+    }
 }
