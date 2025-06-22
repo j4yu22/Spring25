@@ -24,7 +24,17 @@ public class RSA
      */
     public static (BigInteger, BigInteger, BigInteger) Euclid(BigInteger a, BigInteger b)
     {
-        return (0,0,0);
+        // base case: gcd(a, 0) = a
+        if (b == 0)
+            return (a, 1, 0);
+
+        // recursive call
+        var (gcd, x1, y1) = Euclid(b, a % b);
+        // update coefficients using previous results
+        BigInteger x = y1;
+        BigInteger y = x1 - (a / b) * y1;
+
+        return (gcd, x, y);
     }
 
     /* Recursively calculates x^y mod n
@@ -38,7 +48,19 @@ public class RSA
      */
     public static BigInteger ModularExponentiation(BigInteger x, BigInteger y, BigInteger n)
     {
-        return 0;
+        // base case: anything to the power 0 is 1
+        if (y == 0)
+            return 1;
+        // recursively compute half the power
+        BigInteger z = ModularExponentiation(x, y / 2, n);
+        // square the result
+        BigInteger result = (z * z) % n;
+
+        // if exponent is odd, multiply one more time by base
+        if (y % 2 == 1)
+            result = (result * x) % n;
+
+        return result;
     }
 
     /* Generate the RSA private key given the two prime numbers p and q and
@@ -54,7 +76,16 @@ public class RSA
      */
     public static BigInteger GeneratePrivateKey(BigInteger p, BigInteger q, BigInteger e) 
     {
-        return 0;
+        // compute phi
+        BigInteger phi = (p - 1) * (q - 1);
+        // use extended euclidean algorithm to get inverse of e mod phi
+        var (gcd, d, _) = Euclid(e, phi);
+
+        // make sure private key is positive
+        if (d < 0)
+            d += phi;
+
+        return d;
     }
 
     /* Encrypt a value using the public keys e and n
@@ -68,7 +99,8 @@ public class RSA
      */
     public static BigInteger Encrypt(BigInteger value, BigInteger e, BigInteger n)
     {
-        return 0;
+        // encrypt using modular exponentiation: value^e mod n
+        return ModularExponentiation(value, e, n);
     }
 
     /* Decrypt a value using the public key n and private key d
@@ -82,8 +114,7 @@ public class RSA
      */
     public static BigInteger Decrypt(BigInteger value, BigInteger d, BigInteger n)
     {
-        return 0;
+        // decrypt using modular exponentiation: value^d mod n
+        return ModularExponentiation(value, d, n);
     }
-
-
 }
