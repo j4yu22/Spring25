@@ -8,6 +8,7 @@
 */
 
 namespace AlgorithmLib;
+using System.Text;
 
 public static class HuffmanTree
 {
@@ -16,10 +17,10 @@ public static class HuffmanTree
     {
         // Letter represented by the node.  Can be blank.
         public char Letter { get; set; }
-        
+
         // Frequency of letters in the sub-tree beginning with this node
         public int Count { get; set; }
-        
+
         // Left and Right sub-trees (can be Null)
         public Node? Left;
         public Node? Right;
@@ -35,11 +36,24 @@ public static class HuffmanTree
      *     of the text.  This list must be sorted by letter to ensure
      *     consistent huffman tree creation.
      */
-    public static List<(char,int)> Profile(String text)
+    public static List<(char, int)> Profile(String text)
     {
-        return new List<(char, int)>();
+        // count frequencies of characters
+        var frequency = new Dictionary<char, int>();
+        foreach (var ch in text)
+        {
+            if (!frequency.ContainsKey(ch))
+                frequency[ch] = 0;
+            frequency[ch]++;
+        }
+
+        // sort by character and return as list of tuples
+        return frequency
+            .OrderBy(pair => pair.Key)
+            .Select(pair => (pair.Key, pair.Value))
+            .ToList();
     }
-    
+
     /* Create a huffman tree for all letters in the profile.  Use a PQueue object
      * (code already provided for you) in your implementation for the 
      * priority queue.
@@ -51,7 +65,36 @@ public static class HuffmanTree
      */
     public static Node BuildTree(List<(char, int)> profile)
     {
-        return new Node();
+        //  store nodes sorted by frequency
+        var queue = new PQueue<Node>();
+
+        // insert all letters from the profile into the queue
+        foreach (var (letter, count) in profile)
+        {
+            var node = new Node { Letter = letter, Count = count };
+            queue.Enqueue(node, count);
+        }
+
+        // keep combining two lowest-frequency nodes until one remains
+        while (queue.Size() > 1)
+        {
+            var left = queue.Dequeue();
+            var right = queue.Dequeue();
+
+            // create a parent node combining both
+            var merged = new Node
+            {
+                Count = left.Count + right.Count,
+                Left = left,
+                Right = right
+            };
+
+            // enqueue the combined node back into the queue
+            queue.Enqueue(merged, merged.Count);
+        }
+
+        // return the final root node
+        return queue.Dequeue();
     }
 
     /* Create an encoding map from the huffman tree
@@ -64,9 +107,12 @@ public static class HuffmanTree
      */
     public static Dictionary<char, string> CreateEncodingMap(Node tree)
     {
-        return new Dictionary<char, string>();
+        // create map and start recursive map creation
+        var map = new Dictionary<char, string>();
+        _CreateEncodingMap(tree, "", map);
+        return map;
     }
-    
+
     /* Recursively visit each node in the Huffman Tree
      * looking for leaf nodes which contain letters.  Keep
      * track of the huffman code by adding 0 when going left
@@ -84,6 +130,21 @@ public static class HuffmanTree
      */
     public static void _CreateEncodingMap(Node node, string code, Dictionary<char, string> map)
     {
+        // if leaf node, assign code
+        if (node.Left == null && node.Right == null)
+        {
+            // special case if tree has only one node
+            map[node.Letter] = code == "" ? "1" : code;
+            return;
+        }
+
+        // go left with 0
+        if (node.Left != null)
+            _CreateEncodingMap(node.Left, code + "0", map);
+
+        // go right with 1
+        if (node.Right != null)
+            _CreateEncodingMap(node.Right, code + "1", map);
     }
 
     /* Encode a string with the encoding map.
@@ -97,7 +158,13 @@ public static class HuffmanTree
      */
     public static string Encode(string text, Dictionary<char, string> map)
     {
-        return "";
+        // build encoded string from map
+        var encoded = new StringBuilder();
+        foreach (var ch in text)
+        {
+            encoded.Append(map[ch]);
+        }
+        return encoded.ToString();
     }
 
     /* Decode a string with the huffman tree
@@ -110,6 +177,23 @@ public static class HuffmanTree
      */
     public static string Decode(string text, Node tree)
     {
-        return "";
+        // use stringbuilder to accumulate the decoded characters
+        var result = new System.Text.StringBuilder();
+        Node? current = tree;
+
+        foreach (char bit in text)
+        {
+            // move left or right based on the bit
+            current = bit == '0' ? current?.Left : current?.Right;
+
+            // null check before using current
+            if (current != null && current.Left == null && current.Right == null)
+            {
+                result.Append(current.Letter);
+                current = tree;
+            }
+        }
+        
+        return result.ToString();
     }
 }
