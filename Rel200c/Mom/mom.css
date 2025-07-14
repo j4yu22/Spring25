@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.site-title {
+  text-align: center;
+  padding: 1rem 0 1.5rem 0;
+}
+
+.site-title small {
+  display: block;
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 400;
+}
+
+.site-title a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.site-title a:hover {
+  color: #90caf9;
+}
+
+header {
+  background-color: #1e1e1e;
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+header a {
+  color: #e0e0e0;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+header a:hover,
+header a.active {
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.container {
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
+}
+
+.gallery img,
+.gallery video {
+  max-width: 520px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+.about {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+  padding: 0 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
